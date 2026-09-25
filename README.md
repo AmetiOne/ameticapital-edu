@@ -1,6 +1,6 @@
 # ameticapital.com — educational business arithmetic hub
 
-Static educational worksheets published by **Ameti One LLC** for the domain **ameticapital.com**.
+Static educational worksheets published by **MasterEngine AI** for the domain **ameticapital.com**.
 
 This is a **distinct** educational hub — not a mirror of [ameti.capital](https://ameti.capital/), and **not** investment, capital advisory, succession or M&A services. Spelling is **Ameti** (e) everywhere.
 
