@@ -12,8 +12,13 @@
       maximumFractionDigits: n !== 0 && Math.abs(n) < 0.01 ? 6 : 2
     }).format(n);
   };
-  const num = (n) => n.toLocaleString('en-US', { maximumFractionDigits: 4 });
+  const num = (n) => n !== 0 && Math.abs(n) < 0.0001
+    ? n.toExponential(4)
+    : n.toLocaleString('en-US', { maximumFractionDigits: 4 });
   const pct = (n) => num(n * 100) + '%';
+  // Subnormal numbers lose relative precision; this worksheet does not support them.
+  const isSupportedNumber = (n) => Number.isFinite(n) &&
+    (n === 0 || Math.abs(n) >= 2 ** -1022);
 
   document.querySelectorAll('[data-tool]').forEach((form, index) => {
     const out = form.querySelector('output');
@@ -25,11 +30,17 @@
         out.textContent = 'Enter values within the stated limits.';
         return false;
       }
+      const inputs = [...form.querySelectorAll('input')];
       const v = Object.fromEntries(
-        [...form.querySelectorAll('input')].map((x) => [x.name, Number(x.value)])
+        inputs.map((x) => [x.dataset.field || x.name, Number(x.value)])
       );
       if (Object.values(v).some((x) => !Number.isFinite(x))) {
         out.textContent = 'Enter finite values.';
+        return false;
+      }
+      if (inputs.some((x) => !isSupportedNumber(Number(x.value)) ||
+          (Number(x.value) === 0 && /[1-9]/.test(x.value.split(/[eE]/)[0])))) {
+        out.textContent = 'These values exceed the supported numerical range or precision. Use less extreme values.';
         return false;
       }
 
@@ -47,6 +58,11 @@
           const units = v.fixed / contribution;
           const revenue = units * v.price;
           const ratio = contribution / v.price;
+          if (![contribution, units, revenue, ratio].every(isSupportedNumber) ||
+              (v.fixed > 0 && (units === 0 || revenue === 0)) || ratio === 0) {
+            out.textContent = 'These values exceed the supported numerical range or precision. Use less extreme values.';
+            return false;
+          }
           s =
             `Contribution margin per unit: ${money(contribution)}\n` +
             `Contribution margin ratio: ${v.price ? pct(ratio) : 'Undefined — zero price'}\n` +
@@ -86,7 +102,7 @@
             const label = el.closest('label');
             const name = label
               ? label.childNodes[0].textContent.trim()
-              : el.name;
+              : el.dataset.field || el.name;
             return `${name}: ${el.value}`;
           }).join('\n');
           const h1 = document.querySelector('h1');
@@ -116,5 +132,7 @@
     });
     form.addEventListener('input', calculate);
     calculate();
+    const submitButton = form.querySelector('button[type="submit"]');
+    if (submitButton) submitButton.disabled = false;
   });
 })();

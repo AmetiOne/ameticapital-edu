@@ -38,16 +38,16 @@
     <form class="tool" data-tool="break-even">
       <div class="fields fields-3">
         <label>Fixed costs ($)
-          <input type="number" name="fixed" value="5000" min="0" max="1000000000" step="any" required>
+          <input type="number" data-field="fixed" value="5000" min="0" max="1000000000" step="any" required>
         </label>
         <label>Unit selling price ($)
-          <input type="number" name="price" value="40" min="0" max="1000000000" step="any" required>
+          <input type="number" data-field="price" value="40" min="0" max="1000000000" step="any" required>
         </label>
         <label>Variable cost per unit ($)
-          <input type="number" name="variable" value="25" min="0" max="1000000000" step="any" required>
+          <input type="number" data-field="variable" value="25" min="0" max="1000000000" step="any" required>
         </label>
       </div>
-      <button type="submit">Calculate &amp; check</button>
+      <button type="submit" disabled>Calculate &amp; check</button>
       <noscript><p>Enable JavaScript to calculate. The formulas and worked example below remain available without it.</p></noscript>
       <output aria-live="polite">Contribution margin per unit = price − variable cost. Break-even units = fixed costs ÷ contribution margin per unit. Break-even revenue = break-even units × price.</output>
       <div class="actions" data-result-actions hidden>
