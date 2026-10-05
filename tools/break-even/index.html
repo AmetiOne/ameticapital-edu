@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Break-Even Calculator: Units, Revenue &amp; Target Profit</title>
+<meta name="description" content="Enter fixed costs, unit price and variable cost to see contribution margin, break-even units, break-even revenue and units for a target profit. Runs in browser.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://ameticapital.com/tools/break-even/">
+<meta property="og:title" content="Break-even calculator">
+<meta property="og:description" content="Enter fixed costs, unit price and variable cost to see contribution margin, break-even units, break-even revenue and units for a target profit. Runs in browser.">
+<meta property="og:site_name" content="ameticapital.com">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ameticapital.com/tools/break-even/">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="/style.css">
+<script src="/tools.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["WebPage"],"@id":"https://ameticapital.com/tools/break-even/#webpage","url":"https://ameticapital.com/tools/break-even/","name":"Break-Even Calculator: Units, Revenue & Target Profit","description":"Enter fixed costs, unit price and variable cost to see contribution margin, break-even units, break-even revenue and units for a target profit. Runs in browser.","dateModified":"2026-10-04","isPartOf":{"@type":"WebSite","name":"ameticapital.com","url":"https://ameticapital.com/"},"publisher":{"@type":"Organization","name":"Ameti One LLC","url":"https://ameticapital.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ameticapital.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://ameticapital.com/tools/"},{"@type":"ListItem","position":3,"name":"Break-even calculator","item":"https://ameticapital.com/tools/break-even/"}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <a class="brand" href="/">ameticapital.com<span class="brand-sub">Educational business arithmetic</span></a>
+  <nav aria-label="Main">
+    <a href="/tools/">Calculators</a>
+    <a href="/guides/">Guides</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+<main id="main">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/tools/">Calculators</a> / <span aria-current="page">Break-even calculator</span></nav>
+<article class="prose">
+<h1>Break-even calculator</h1>
+<p class="lead">Enter one period's fixed costs, a unit selling price and the variable cost per unit. The calculator shows contribution margin, break-even units, break-even revenue and, if you add a target profit, the volume needed to reach it.</p>
+<form class="tool" data-tool="break-even">
+  <div class="fields fields-3">
+    <label>Fixed costs for the period ($)<input type="number" name="fixed" value="5000" min="0" max="1000000000" step="any" required></label>
+    <label>Unit selling price ($)<input type="number" name="price" value="40" min="0" max="1000000000" step="any" required></label>
+    <label>Variable cost per unit ($)<input type="number" name="variable" value="25" min="0" max="1000000000" step="any" required></label>
+  </div>
+  <div class="fields">
+    <label>Target operating profit ($, optional)<input type="number" name="target" value="0" min="0" max="1000000000" step="any"></label>
+  </div>
+  <button type="submit">Calculate &amp; check</button>
+  <noscript><p>Enable JavaScript to calculate. The formulas and worked example below remain available without it.</p></noscript>
+  <output aria-live="polite">Contribution margin per unit = price − variable cost. Break-even units = fixed costs ÷ contribution margin per unit. Break-even revenue = break-even units × price.</output>
+  <div class="actions" data-result-actions hidden>
+    <button type="button" class="secondary" data-action="download">Download calculation</button>
+    <button type="button" class="secondary" data-action="print">Print result</button>
+    <button type="button" class="secondary" data-action="reset">Reset example</button>
+  </div>
+  <p class="note">Illustrative starting values. Inputs stay in this tab. Download saves a plain-text record on your device.</p>
+  <p class="print-note">Source: https://ameticapital.com/tools/break-even/ · Save the assumptions with this result.</p>
+</form>
+<h2>Formulas used</h2>
+<div class="formula-box" role="region" aria-label="Break-even formulas">
+  Contribution margin per unit = price − variable cost per unit<br>
+  Contribution margin ratio = contribution margin per unit ÷ price<br>
+  Break-even units = fixed costs ÷ contribution margin per unit<br>
+  Break-even revenue = fixed costs ÷ contribution margin ratio<br>
+  Units for target profit = (fixed costs + target profit) ÷ contribution margin per unit
+</div>
+<p>These are the standard cost-volume-profit relationships described in OpenStax <em>Managerial Accounting</em> §3.2 and in the U.S. Small Business Administration's break-even guidance (sources below).</p>
+<h2>Worked example (illustrative)</h2>
+<p>A product sells for $40 and carries $25 of variable cost per unit; fixed costs for the month are $5,000.</p>
+<ol>
+<li>Contribution margin per unit = $40 − $25 = <strong>$15</strong>.</li>
+<li>Contribution margin ratio = $15 ÷ $40 = <strong>37.5%</strong>.</li>
+<li>Break-even units = $5,000 ÷ $15 ≈ 333.33, so <strong>334 whole units</strong>. Check: 333 units leave 333 × $15 − $5,000 = −$5; 334 units leave +$10.</li>
+<li>Break-even revenue = $5,000 ÷ 0.375 ≈ <strong>$13,333.33</strong> (the same as 333.33 × $40).</li>
+<li>With a $3,000 target profit: ($5,000 + $3,000) ÷ $15 ≈ 533.33, so <strong>534 units</strong>, or about $21,333 of revenue.</li>
+</ol>
+<h2>How sensitive is break-even to price?</h2>
+<p>Holding variable cost at $25 and fixed costs at $5,000, small price changes move break-even a lot because they change contribution per unit one-for-one:</p>
+<table>
+<thead><tr><th scope="col">Price</th><th scope="col">Contribution / unit</th><th scope="col">Break-even units</th><th scope="col">Break-even revenue</th></tr></thead>
+<tbody>
+<tr><td>$36</td><td>$11</td><td>454.55 → 455</td><td>$16,363.64</td></tr>
+<tr><td>$38</td><td>$13</td><td>384.62 → 385</td><td>$14,615.38</td></tr>
+<tr><td>$40</td><td>$15</td><td>333.33 → 334</td><td>$13,333.33</td></tr>
+<tr><td>$42</td><td>$17</td><td>294.12 → 295</td><td>$12,352.94</td></tr>
+<tr><td>$44</td><td>$19</td><td>263.16 → 264</td><td>$11,578.95</td></tr>
+</tbody>
+</table>
+<p>A 10% price cut (from $40 to $36) raises break-even volume by about 36% in this example. Fixed costs behave linearly instead: at $15 contribution, $4,000 of fixed costs needs 266.67 units and $6,000 needs 400. Changing one input at a time like this is the sensitivity analysis described in OpenStax §3.3.</p>
+<h2>Before you enter your own numbers</h2>
+<ul>
+<li>Use one period for fixed costs and think about volume for that same period.</li>
+<li>Count only costs that truly vary per unit as variable; see <a href="/guides/fixed-vs-variable-costs/">fixed vs variable costs</a>.</li>
+<li>Use one currency and keep sales tax out of price.</li>
+<li>Remember the model assumes a constant price, constant variable cost and fixed costs that stay flat across the volume range.</li>
+</ul>
+<h2>What the result does not tell you</h2>
+<p>Break-even is an operating-profit concept, not a cash forecast. Loan principal repayments, inventory build-up, owner draws, taxes and payment timing are outside the model. It also does not tell you whether the market will buy 334 units at $40. Treat the output as a structured way to test assumptions, not as a plan.</p>
+<details><summary>Is break-even the same as profit?</summary><p>No. At break-even, total contribution equals fixed costs, so modeled operating profit is zero. Every unit above break-even adds one unit's contribution margin to operating profit.</p></details>
+<details><summary>Should I use break-even units or break-even revenue?</summary><p>Use units when you sell one product with a clear unit. Use revenue when you sell many products or services; the <a href="/guides/break-even-units-vs-revenue/">units vs revenue guide</a> explains both.</p></details>
+<details><summary>Does the calculator store my numbers?</summary><p>No. Calculations run in your browser and nothing is sent to a server. Reloading resets the example. See <a href="/privacy/">Privacy</a>.</p></details>
+<section class="sources"><h2>Sources for definitions</h2><ul><li><a href="https://openstax.org/books/principles-managerial-accounting/pages/3-2-calculate-a-break-even-point-in-units-and-dollars" rel="noopener">OpenStax, Managerial Accounting §3.2: Calculate a break-even point in units and dollars</a></li><li><a href="https://openstax.org/books/principles-managerial-accounting/pages/3-3-perform-break-even-sensitivity-analysis-for-a-single-product-under-changing-business-situations" rel="noopener">OpenStax, Managerial Accounting §3.3: Break-even sensitivity analysis</a></li><li><a href="https://www.sba.gov/business-guide/plan-your-business/calculate-your-startup-costs" rel="noopener">U.S. Small Business Administration: Calculate your startup costs (break-even analysis)</a></li></ul><p>Definitions follow standard managerial-accounting usage as presented in the sources above. All dollar figures on this page are our own illustrative arithmetic.</p></section>
+<p class="disclaimer-callout">Educational arithmetic only. Results do not set prices, forecast sales or establish suitability for any lending, investment or business decision. See <a href="/terms/">Use &amp; limitations</a>.</p>
+<section data-related><h2>Keep working through the question</h2><ul><li><a href="/tools/contribution-margin/">Contribution margin calculator</a></li><li><a href="/guides/contribution-margin/">Contribution margin explained</a></li><li><a href="/guides/target-profit-margin-of-safety/">Target profit and margin of safety</a></li><li><a href="/tools/">All calculators</a></li></ul></section>
+</article>
+<p class="note">Last reviewed October 4, 2026. Worked numbers on this page are illustrative arithmetic, not data about any real business.</p>
+</main>
+<footer>
+  <strong>ameticapital.com</strong>
+  <p>Break-even, contribution margin and cost-behavior arithmetic. Educational only, not investment, capital advisory, succession or M&amp;A services.</p>
+  <nav aria-label="Footer">
+    <a href="/tools/">Calculators</a>
+    <a href="/guides/">Guides</a>
+    <a href="/about/">About &amp; method</a>
+    <a href="/contact/">Contact</a>
+    <a href="/privacy/">Privacy</a>
+    <a href="/terms/">Use &amp; limitations</a>
+  </nav>
+  <p>© 2026 Ameti One LLC. Examples are illustrative. No advertising or affiliate tracking is active on this site. Margin and markup worksheets live on the separate sibling site <a href="https://ameti.capital/">ameti.capital</a>.</p>
+</footer>
+</body>
+</html>

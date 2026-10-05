@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contribution Margin Calculator: Per Unit, Ratio &amp; Total</title>
+<meta name="description" content="Calculate contribution margin per unit, total contribution, contribution margin ratio, variable cost ratio and operating income from price, cost and volume.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://ameticapital.com/tools/contribution-margin/">
+<meta property="og:title" content="Contribution margin calculator">
+<meta property="og:description" content="Calculate contribution margin per unit, total contribution, contribution margin ratio, variable cost ratio and operating income from price, cost and volume.">
+<meta property="og:site_name" content="ameticapital.com">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ameticapital.com/tools/contribution-margin/">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="/style.css">
+<script src="/tools.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["WebPage"],"@id":"https://ameticapital.com/tools/contribution-margin/#webpage","url":"https://ameticapital.com/tools/contribution-margin/","name":"Contribution Margin Calculator: Per Unit, Ratio & Total","description":"Calculate contribution margin per unit, total contribution, contribution margin ratio, variable cost ratio and operating income from price, cost and volume.","dateModified":"2026-10-04","isPartOf":{"@type":"WebSite","name":"ameticapital.com","url":"https://ameticapital.com/"},"publisher":{"@type":"Organization","name":"Ameti One LLC","url":"https://ameticapital.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ameticapital.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://ameticapital.com/tools/"},{"@type":"ListItem","position":3,"name":"Contribution margin calculator","item":"https://ameticapital.com/tools/contribution-margin/"}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <a class="brand" href="/">ameticapital.com<span class="brand-sub">Educational business arithmetic</span></a>
+  <nav aria-label="Main">
+    <a href="/tools/">Calculators</a>
+    <a href="/guides/">Guides</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+<main id="main">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/tools/">Calculators</a> / <span aria-current="page">Contribution margin calculator</span></nav>
+<article class="prose">
+<h1>Contribution margin calculator</h1>
+<p class="lead">Enter a selling price, variable cost per unit, the number of units sold and (optionally) fixed costs. See how much each unit and the whole volume contribute toward fixed costs and profit.</p>
+<form class="tool" data-tool="contribution-margin">
+  <div class="fields">
+    <label>Unit selling price ($)<input type="number" name="price" value="40" min="0" max="1000000000" step="any" required></label>
+    <label>Variable cost per unit ($)<input type="number" name="variable" value="25" min="0" max="1000000000" step="any" required></label>
+    <label>Units sold in the period<input type="number" name="units" value="500" min="0" max="1000000000" step="any" required></label>
+    <label>Fixed costs for the period ($, optional)<input type="number" name="fixed" value="5000" min="0" max="1000000000" step="any"></label>
+  </div>
+  <button type="submit">Calculate &amp; check</button>
+  <noscript><p>Enable JavaScript to calculate. The formulas and worked example below remain available without it.</p></noscript>
+  <output aria-live="polite">Contribution margin per unit = price − variable cost. Total contribution = contribution per unit × units. Contribution margin ratio = contribution ÷ price.</output>
+  <div class="actions" data-result-actions hidden>
+    <button type="button" class="secondary" data-action="download">Download calculation</button>
+    <button type="button" class="secondary" data-action="print">Print result</button>
+    <button type="button" class="secondary" data-action="reset">Reset example</button>
+  </div>
+  <p class="note">Illustrative starting values. Inputs stay in this tab.</p>
+  <p class="print-note">Source: https://ameticapital.com/tools/contribution-margin/ · Save the assumptions with this result.</p>
+</form>
+<h2>Formulas used</h2>
+<div class="formula-box" role="region" aria-label="Contribution margin formulas">
+  Contribution margin per unit = price − variable cost per unit<br>
+  Total contribution margin = contribution margin per unit × units sold<br>
+  Contribution margin ratio = contribution margin per unit ÷ price<br>
+  Variable cost ratio = variable cost per unit ÷ price = 1 − contribution margin ratio<br>
+  Operating income = total contribution margin − fixed costs
+</div>
+<h2>Worked example as a contribution-format income statement</h2>
+<p>Using the default inputs (500 units at $40, $25 variable cost per unit and $5,000 of fixed costs, all illustrative):</p>
+<table>
+<thead><tr><th scope="col">Line</th><th scope="col">Total</th><th scope="col">Per unit</th><th scope="col">% of sales</th></tr></thead>
+<tbody>
+<tr><td>Sales</td><td>$20,000</td><td>$40</td><td>100%</td></tr>
+<tr><td>Variable costs</td><td>$12,500</td><td>$25</td><td>62.5%</td></tr>
+<tr><td><strong>Contribution margin</strong></td><td><strong>$7,500</strong></td><td><strong>$15</strong></td><td><strong>37.5%</strong></td></tr>
+<tr><td>Fixed costs</td><td>$5,000</td><td></td><td></td></tr>
+<tr><td><strong>Operating income</strong></td><td><strong>$2,500</strong></td><td></td><td>12.5%</td></tr>
+</tbody>
+</table>
+<p>The 37.5% ratio tells you that every additional $1 of sales adds about $0.375 to operating income, as long as price and variable cost hold and fixed costs do not step up. If sales rose by $2,000 (50 more units), operating income would rise by $750.</p>
+<h2>How to read the outputs</h2>
+<ul>
+<li><strong>Contribution per unit</strong> is what one more sale adds before fixed costs. It is the number to compare when deciding whether a one-off order covers its own variable costs.</li>
+<li><strong>Contribution margin ratio</strong> is the per-dollar version; it is what you need for break-even revenue and for comparing products with very different prices.</li>
+<li><strong>Operating income</strong> appears only if you enter fixed costs. A negative figure means the volume entered is below break-even; the <a href="/tools/break-even/">break-even calculator</a> shows how far below.</li>
+</ul>
+<h2>Contribution margin is not gross margin</h2>
+<p>Gross margin subtracts cost of goods sold, which can include fixed production overhead, and ignores variable selling costs such as commissions. Contribution margin subtracts <em>all</em> variable costs, production and selling, and nothing fixed. The two can differ a lot for the same product. For gross margin and markup arithmetic, use the sibling site <a href="https://ameti.capital/">ameti.capital</a>.</p>
+<details><summary>Can contribution margin be negative?</summary><p>Yes. If variable cost per unit exceeds price, each sale makes the loss larger, and no amount of volume reaches break-even.</p></details>
+<details><summary>What if I sell several products?</summary><p>Run each product separately to compare contribution per unit and ratio, then use a weighted average for break-even; see the sales-mix section of <a href="/guides/break-even-units-vs-revenue/">break-even in units vs revenue</a>.</p></details>
+<section class="sources"><h2>Sources for definitions</h2><ul><li><a href="https://openstax.org/books/principles-managerial-accounting/pages/3-1-explain-contribution-margin-and-calculate-contribution-margin-per-unit-contribution-margin-ratio-and-total-contribution-margin" rel="noopener">OpenStax, Managerial Accounting §3.1: Contribution margin per unit, ratio and total</a></li></ul><p>Definitions follow standard managerial-accounting usage as presented in the sources above. All dollar figures on this page are our own illustrative arithmetic.</p></section>
+<p class="disclaimer-callout">Educational arithmetic only. Results do not set prices, forecast sales or establish suitability for any lending, investment or business decision. See <a href="/terms/">Use &amp; limitations</a>.</p>
+<section data-related><h2>Keep working through the question</h2><ul><li><a href="/guides/contribution-margin/">Contribution margin explained</a></li><li><a href="/tools/break-even/">Break-even calculator</a></li><li><a href="/guides/fixed-vs-variable-costs/">Fixed vs variable costs</a></li><li><a href="/tools/">All calculators</a></li></ul></section>
+</article>
+<p class="note">Last reviewed October 4, 2026. Worked numbers on this page are illustrative arithmetic, not data about any real business.</p>
+</main>
+<footer>
+  <strong>ameticapital.com</strong>
+  <p>Break-even, contribution margin and cost-behavior arithmetic. Educational only, not investment, capital advisory, succession or M&amp;A services.</p>
+  <nav aria-label="Footer">
+    <a href="/tools/">Calculators</a>
+    <a href="/guides/">Guides</a>
+    <a href="/about/">About &amp; method</a>
+    <a href="/contact/">Contact</a>
+    <a href="/privacy/">Privacy</a>
+    <a href="/terms/">Use &amp; limitations</a>
+  </nav>
+  <p>© 2026 Ameti One LLC. Examples are illustrative. No advertising or affiliate tracking is active on this site. Margin and markup worksheets live on the separate sibling site <a href="https://ameti.capital/">ameti.capital</a>.</p>
+</footer>
+</body>
+</html>
