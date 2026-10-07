@@ -108,6 +108,13 @@
           s = 'Unknown tool.';
       }
       out.textContent = s;
+      /* Premium: brief visual confirmation that the result refreshed. */
+      if (typeof out.animate === 'function' ||
+          !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        out.classList.remove('result-flash');
+        void out.offsetWidth; /* restart the animation */
+        out.classList.add('result-flash');
+      }
       return true;
     }
 
