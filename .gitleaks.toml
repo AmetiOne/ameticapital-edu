@@ -1,0 +1,29 @@
+# Gitleaks configuration — estate baseline (MB-043 / EA-0001).
+# Scope statement (MB-126): the committed baseline `.gitleaks-baseline.json`
+# was produced by a gitleaks HEAD-TREE scan (extracted default-branch tree,
+# `gitleaks dir`) with this config — not a git-history scan. History scans
+# are a separate, explicitly-scoped exercise (ScanScope comparability).
+title = "AmetiOne estate gitleaks baseline (MB-043)"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Build artifacts and self-expiring capture envelopes (EA-0001/EA-0002)"
+paths = [
+  '''(^|/)\.next/''',
+  '''(^|/)\.open-next/''',
+  '''(^|/)node_modules/''',
+  '''(^|/)\.turbo/''',
+  '''(^|/)dist/''',
+  '''(^|/)build/''',
+  '''(^|/)\.vercel/''',
+]
+regexes = [
+  # GitHub Contents-API envelope captures: download URLs carrying a
+  # short-lived signed ?token= issued by GitHub itself (EA-0002 — capture
+  # artifact, not a live credential).
+  '''api\.github\.com/repos/[^"'\s]+[?&]token=''',
+  # Pre-signed object-store URLs captured in research records (self-expiring).
+  '''X-Amz-(Signature|Credential)=[A-Za-z0-9%/+=\-]''',
+]
