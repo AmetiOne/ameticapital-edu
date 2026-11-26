@@ -2,6 +2,29 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<!-- Google tag (gtag.js) - Pass 4 (2026-11-19): own property 565159904 (G-5EM8PQN10G) replaces the pooled ID; A5 config hardening; A8 production-hostname + webdriver gate; R-3 internal-traffic marking via the _internal_lane cookie (planted by ?internal=1). -->
+<script>
+(function () {
+  var host = window.location.hostname;
+  if ((host !== "ameticapital.com" && host !== "www.ameticapital.com") || navigator.webdriver) { return; }
+  var internal = /(^|;\s*)_internal_lane=1(;|$)/.test(document.cookie);
+  if (!internal && /[?&]internal=1(&|$)/.test(window.location.search)) {
+    document.cookie = "_internal_lane=1; path=/; max-age=31536000; SameSite=Lax";
+    internal = true;
+  }
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.gtag = gtag;
+  var cfg = {allow_google_signals: false, allow_ad_personalization_signals: false, ads_data_redaction: true, url_passthrough: false};
+  if (internal) { cfg.traffic_type = "internal"; }
+  var s = document.createElement("script");
+  s.async = true;
+  s.src = "https://www.googletagmanager.com/gtag/js?id=G-5EM8PQN10G";
+  document.head.appendChild(s);
+  gtag('js', new Date());
+  gtag('config', 'G-5EM8PQN10G', cfg);
+})();
+</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>About ameticapital.com: Publisher, Method &amp; Disambiguation</title>
 <meta name="description" content="Who publishes ameticapital.com, how worksheets and guides are prepared and checked, how corrections work, and how we differ from similarly named advisory firms.">
@@ -12,14 +35,22 @@
 <meta property="og:site_name" content="ameticapital.com">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ameticapital.com/about/">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://ameticapital.com/og/about.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ameticapital.com — break-even and contribution margin worksheets">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ameticapital.com/og/about.png">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/style.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://ameticapital.com/about/#webpage","url":"https://ameticapital.com/about/","name":"About ameticapital.com: Publisher, Method & Disambiguation","description":"Who publishes ameticapital.com, how worksheets and guides are prepared and checked, how corrections work, and how we differ from similarly named advisory firms.","dateModified":"2026-10-04","isPartOf":{"@type":"WebSite","name":"ameticapital.com","url":"https://ameticapital.com/"},"publisher":{"@type":"Organization","name":"Ameti One LLC","url":"https://ameticapital.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ameticapital.com/"},{"@type":"ListItem","position":2,"name":"About","item":"https://ameticapital.com/about/"}]}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header>
-  <a class="brand" href="/">ameticapital.com<span class="brand-sub">Educational business arithmetic</span></a>
+  <a class="brand" href="/"><svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect width="64" height="64" rx="12" fill="#3d5650"/><line x1="12" y1="33.3" x2="52" y2="22.4" stroke="#e8c07a" stroke-width="5" stroke-linecap="round"/><line x1="12" y1="52" x2="52" y2="12" stroke="#f6f7f4" stroke-width="5" stroke-linecap="round"/><circle cx="37" cy="27" r="4.6" fill="#b07a2a" stroke="#f6f7f4" stroke-width="1.6"/></svg>ameticapital.com<span class="brand-sub">Educational business arithmetic</span></a>
   <nav aria-label="Main">
     <a href="/tools/">Calculators</a>
     <a href="/guides/">Guides</a>

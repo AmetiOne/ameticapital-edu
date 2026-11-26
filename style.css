@@ -251,3 +251,41 @@ thead th { background: rgba(0,0,0,0.05); }
 code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; background: rgba(0,0,0,0.05); padding: 1px 4px; border-radius: 3px; }
 .sources ul { padding-left: 1.2em; }
 .prose h3 { margin-top: 1.4em; }
+
+/* 2026-11-08 Site 16 "The Crossing": designed records, to-scale chart, schematics, capture.
+   Appended only — no existing rule above is modified. */
+.viz { margin-top: 22px; }
+.record-status { margin: 0 0 10px; }
+.record-table, .statement { font-variant-numeric: tabular-nums; }
+.record-table th { width: 36%; }
+.statement .num-col { text-align: right; }
+.statement thead th { background: var(--output); }
+.statement .rule-top th, .statement .rule-top td { border-top: 2px solid var(--ink); }
+.statement .rule-double th, .statement .rule-double td { border-bottom: 3px double var(--ink); }
+.statement caption.stmt-note { font-weight: 400; color: var(--muted); font-size: 13px; }
+.record-statement { border: 1px solid var(--line); border-radius: 10px; padding: 16px 20px; background: white; }
+.record-statement p { margin: 6px 0; }
+.be-chart { margin: 18px 0 4px; }
+.be-chart svg { width: 100%; height: auto; display: block; }
+.chart-svg .tick { font: 12px system-ui, sans-serif; fill: var(--muted); }
+.chart-svg .tick-exact { fill: var(--ink); font-weight: 700; }
+.chart-svg .tick-sub { font: 10.5px system-ui, sans-serif; fill: var(--muted); }
+.chart-svg .region { font: 600 12.5px system-ui, sans-serif; fill: var(--muted); }
+.chart-svg .line-label { font: 600 13px system-ui, sans-serif; fill: var(--ink); }
+.chart-svg .callout { font: 700 13.5px system-ui, sans-serif; fill: var(--ink); }
+.chart-svg .callout-sub { font: 12px system-ui, sans-serif; fill: var(--muted); }
+.chart-svg .annot { font: 11.5px system-ui, sans-serif; fill: var(--muted); }
+figure.schematic { margin: 26px 0; padding: 20px 22px; background: white; border: 1px solid var(--line); border-radius: 12px; }
+figure.schematic svg { width: 100%; height: auto; display: block; }
+figure.schematic figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; }
+.schematic .s-label { font: 600 13px system-ui, sans-serif; fill: var(--ink); }
+.schematic .s-region { font: 600 12.5px system-ui, sans-serif; fill: var(--muted); }
+.schematic .s-note { font: 12px system-ui, sans-serif; fill: var(--muted); }
+.capture { margin: 34px 0 8px; padding: 24px 26px; border: 1px solid var(--line); border-radius: 12px; background: white; }
+.capture h2 { margin-top: 0; }
+.capture-form { display: flex; gap: 14px; flex-wrap: wrap; align-items: end; }
+.capture-form label { flex: 1 1 260px; }
+@media print {
+  .capture { display: none !important; }
+  .viz, .be-chart, figure.schematic { break-inside: avoid; }
+}
