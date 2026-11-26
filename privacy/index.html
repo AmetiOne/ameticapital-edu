@@ -2,24 +2,55 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<!-- Google tag (gtag.js) - Pass 4 (2026-11-19): own property 565159904 (G-5EM8PQN10G) replaces the pooled ID; A5 config hardening; A8 production-hostname + webdriver gate; R-3 internal-traffic marking via the _internal_lane cookie (planted by ?internal=1). -->
+<script>
+(function () {
+  var host = window.location.hostname;
+  if ((host !== "ameticapital.com" && host !== "www.ameticapital.com") || navigator.webdriver) { return; }
+  var internal = /(^|;\s*)_internal_lane=1(;|$)/.test(document.cookie);
+  if (!internal && /[?&]internal=1(&|$)/.test(window.location.search)) {
+    document.cookie = "_internal_lane=1; path=/; max-age=31536000; SameSite=Lax";
+    internal = true;
+  }
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.gtag = gtag;
+  var cfg = {allow_google_signals: false, allow_ad_personalization_signals: false, ads_data_redaction: true, url_passthrough: false};
+  if (internal) { cfg.traffic_type = "internal"; }
+  var s = document.createElement("script");
+  s.async = true;
+  s.src = "https://www.googletagmanager.com/gtag/js?id=G-5EM8PQN10G";
+  document.head.appendChild(s);
+  gtag('js', new Date());
+  gtag('config', 'G-5EM8PQN10G', cfg);
+})();
+</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Privacy Notice | ameticapital.com Educational Calculators</title>
-<meta name="description" content="Privacy for ameticapital.com: calculators run in your browser; no accounts, ads or analytics; what the host processes; how contact email is used.">
+<meta name="description" content="Privacy for ameticapital.com: calculators run in your browser; no accounts or advertising; Google Analytics use disclosed; what the host processes; how contact email is used.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://ameticapital.com/privacy/">
 <meta property="og:title" content="Privacy notice">
-<meta property="og:description" content="Privacy for ameticapital.com: calculators run in your browser; no accounts, ads or analytics; what the host processes; how contact email is used.">
+<meta property="og:description" content="Privacy for ameticapital.com: calculators run in your browser; no accounts or advertising; Google Analytics use disclosed; what the host processes; how contact email is used.">
 <meta property="og:site_name" content="ameticapital.com">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ameticapital.com/privacy/">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://ameticapital.com/og/privacy.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ameticapital.com — break-even and contribution margin worksheets">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ameticapital.com/og/privacy.png">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/style.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://ameticapital.com/privacy/#webpage","url":"https://ameticapital.com/privacy/","name":"Privacy Notice | ameticapital.com Educational Calculators","description":"Privacy for ameticapital.com: calculators run in your browser; no accounts, ads or analytics; what the host processes; how contact email is used.","dateModified":"2026-10-04","isPartOf":{"@type":"WebSite","name":"ameticapital.com","url":"https://ameticapital.com/"},"publisher":{"@type":"Organization","name":"Ameti One LLC","url":"https://ameticapital.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ameticapital.com/"},{"@type":"ListItem","position":2,"name":"Privacy","item":"https://ameticapital.com/privacy/"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://ameticapital.com/privacy/#webpage","url":"https://ameticapital.com/privacy/","name":"Privacy Notice | ameticapital.com Educational Calculators","description":"Privacy for ameticapital.com: calculators run in your browser; no accounts or advertising; Google Analytics use disclosed; what the host processes; how contact email is used.","dateModified":"2026-11-09","isPartOf":{"@type":"WebSite","name":"ameticapital.com","url":"https://ameticapital.com/"},"publisher":{"@type":"Organization","name":"Ameti One LLC","url":"https://ameticapital.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ameticapital.com/"},{"@type":"ListItem","position":2,"name":"Privacy","item":"https://ameticapital.com/privacy/"}]}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header>
-  <a class="brand" href="/">ameticapital.com<span class="brand-sub">Educational business arithmetic</span></a>
+  <a class="brand" href="/"><svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect width="64" height="64" rx="12" fill="#3d5650"/><line x1="12" y1="33.3" x2="52" y2="22.4" stroke="#e8c07a" stroke-width="5" stroke-linecap="round"/><line x1="12" y1="52" x2="52" y2="12" stroke="#f6f7f4" stroke-width="5" stroke-linecap="round"/><circle cx="37" cy="27" r="4.6" fill="#b07a2a" stroke="#f6f7f4" stroke-width="1.6"/></svg>ameticapital.com<span class="brand-sub">Educational business arithmetic</span></a>
   <nav aria-label="Main">
     <a href="/tools/">Calculators</a>
     <a href="/guides/">Guides</a>
@@ -30,21 +61,21 @@
 <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <span aria-current="page">Privacy</span></nav>
 <article class="prose">
 <h1>Privacy notice</h1>
-<p class="lead">This notice explains what information is processed when you use ameticapital.com, operated by <strong>Ameti One LLC</strong>. Last updated October 4, 2026.</p>
+<p class="lead">This notice explains what information is processed when you use ameticapital.com, operated by <strong>Ameti One LLC</strong>. Last updated November 9, 2026.</p>
 <h2>Calculator inputs</h2>
 <p>The calculators run entirely in your browser using JavaScript. The numbers you type are not sent to us or stored on a server. Reloading the page resets them. The "Download calculation" button creates a text file on your own device; we never receive it.</p>
-<h2>No accounts, advertising or analytics scripts</h2>
-<p>The site has no sign-up, no login, no advertising, no affiliate links and no third-party analytics or tracking scripts, and the site's own code does not set cookies.</p>
+<h2>Accounts, advertising and analytics</h2>
+<p>The site has no sign-up, no login, no advertising and no affiliate links. <strong>Analytics.</strong> This site uses Google Analytics 4 (measurement ID G-5EM8PQN10G) to measure aggregate page views and site usage. Google Analytics sets first-party cookies to distinguish browsers and sends page-view metadata to Google. <strong>Calculator inputs are never sent to Google Analytics or any server</strong> — all calculations and downloaded records run entirely in your browser. We do not run advertising networks, remarketing pixels, or cross-site behavioral profiling.</p>
 <h2>Hosting and security processing</h2>
 <p>The site is served through Cloudflare. Like any web host, Cloudflare processes technical request data, such as IP address, browser user agent, requested URL and time, to deliver pages and protect against abuse, and it may run security or bot-detection checks. That processing is governed by Cloudflare's own privacy policy. We do not use this data to profile visitors.</p>
 <h2>Email</h2>
-<p>If you email <a href="mailto:contact@ameticapital.com">contact@ameticapital.com</a>, we receive your address and message and use them only to reply and to act on your request (for example, fixing an error). Messages are delivered through our email-forwarding and mailbox providers.</p>
+<p>If you email <a href="/cdn-cgi/l/email-protection#d4b7bbbaa0b5b7a094b5b9b1a0bdb7b5a4bda0b5b8fab7bbb9"><span class="__cf_email__" data-cfemail="177478796376746357767a72637e7476677e63767b3974787a">[email&#160;protected]</span></a>, we receive your address and message and use them only to reply and to act on your request (for example, fixing an error). Messages are delivered through our email-forwarding and mailbox providers.</p>
 <h2>Links to other sites</h2>
 <p>Guides link to external sources such as OpenStax and the U.S. Small Business Administration, and to our sibling site ameti.capital. Those sites have their own privacy practices.</p>
 <h2>Children</h2>
 <p>The site is intended for a general adult audience learning business arithmetic and is not directed at children.</p>
 <h2>Changes and contact</h2>
-<p>If our practices change, for example if analytics or advertising were ever added, this notice will be updated before the change takes effect. Questions: <a href="/contact/">contact page</a>.</p>
+<p>If our practices change, for example if advertising were ever added or the analytics setup changed, this notice will be updated before the change takes effect. Questions: <a href="/contact/">contact page</a>.</p>
 </article>
 </main>
 <footer>
@@ -60,5 +91,5 @@
   </nav>
   <p>© 2026 Ameti One LLC. Examples are illustrative. No advertising or affiliate tracking is active on this site. Margin and markup worksheets live on the separate sibling site <a href="https://ameti.capital/">ameti.capital</a>.</p>
 </footer>
-</body>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
 </html>
